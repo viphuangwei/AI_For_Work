@@ -1,0 +1,677 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>AI Resources Notion notes</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="52c1cf5c-b07b-4087-8e8b-3742a98e1f31" class="page sans"><header><div>  <a href="index.html">🏠</a></div><h1 class="page-title">AI Machine Learning Notion Notes</h1><p class="page-description"></p></header><div class="page-body"><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>﻿Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>Created</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesSelect"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM7.62402 10.6348C7.79492 10.915 8.20508 10.9287 8.37598 10.6348L10.666 6.73145C10.8574 6.41016 10.7002 6.04102 10.3652 6.04102H5.62793C5.29297 6.04102 5.14941 6.43066 5.32031 6.73145L7.62402 10.6348Z"></path></svg></span>Tags</th></tr></thead><tbody><tr id="310ddca0-de8d-4a5d-972e-7b25f41dc8ca"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/What%20is%20underfitting%20310ddca0de8d4a5d972e7b25f41dc8ca.html">What is underfitting?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="669aa3b9-4d25-4199-b064-275dbddade51"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/F1%20score%20669aa3b94d254199b064275dbddade51.html">F1 score</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="aa65c263-5dab-481c-899f-7cb6404da7fd"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Why%20is%20L1%20regularization%20supposed%20to%20lead%20to%20spars%20aa65c2635dab481c899f7cb6404da7fd.html">Why is L1 regularization supposed to lead to sparsity than L2?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Regularization</span></td></tr><tr id="512b4123-8784-4625-8441-6f35c471a5d6"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/What%20is%20backpropagation%20512b41238784462584416f35c471a5d6.html">What is backpropagation?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="46d8a01d-7a97-4ec9-b8af-20e3790b7a21"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Why%20MSE%20doesn%E2%80%99t%20work%20with%20logistic%20regression%2046d8a01d7a974ec9b8af20e3790b7a21.html">Why MSE doesn’t work with logistic regression?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="c83fd90f-d6c9-4e90-96e3-0aaaea9e9127"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Why%20AUC%20is%20desirable%20c83fd90fd6c94e9096e30aaaea9e9127.html">Why AUC is desirable?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="2234ff9f-c4df-4466-baae-87c1cbb37769"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/How%20to%20avoid%20overfitting%202234ff9fc4df4466baae87c1cbb37769.html">How to avoid overfitting?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="4f1b4869-3978-40ab-b462-51969057dd98"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/L1%20VS%20L2%20regularization%204f1b4869397840abb46251969057dd98.html">L1 VS L2 regularization</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Regularization</span></td></tr><tr id="5f5f0ad7-c4ba-4226-8a14-c458b21719ee"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Generative%20vs%20Discriminative%205f5f0ad7c4ba42268a14c458b21719ee.html">Generative vs Discriminative</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="a235c30c-9988-4cec-8ecb-fb7170329273"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Lasso%20and%20Ridge%20a235c30c99884cec8ecbfb7170329273.html">Lasso and Ridge</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Regularization</span></td></tr><tr id="07865029-acf0-4b77-a33a-c8b8b1f7cdff"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Hinge%20loss%20-%20SVM%2007865029acf04b77a33ac8b8b1f7cdff.html">Hinge loss - SVM</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="7517c07c-050e-4195-8d5d-2146e248fd23"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Why%20is%20bias%20used%20in%20NN%207517c07c050e41958d5d2146e248fd23.html">Why is bias used in NN?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="8b642e23-b0f9-45d7-8dd3-7e405b8b2ac1"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Entropy%20Cross-Entropy%20Relative-entropy%20loss%208b642e23b0f945d78dd37e405b8b2ac1.html">Entropy / Cross-Entropy / Relative-entropy loss</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="a8f2147a-70f0-47bb-a318-36a9291259f0"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Cross%20Validation%20Stratified%20cross-validation%20a8f2147a70f047bba31836a9291259f0.html">Cross Validation / Stratified cross-validation</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="f5c618fe-2677-4019-a873-332103533cfc"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Confusion%20matrix%20f5c618fe26774019a873332103533cfc.html">Confusion matrix</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="e019b91b-ddaa-4b4c-87dd-87e8175cf53d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Why%20does%20regularization%20use%20L1,%20L2%20not%20others%20e019b91bddaa4b4c87dd87e8175cf53d.html">Why does regularization use L1, L2 not others?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Regularization</span></td></tr><tr id="f57a6e71-75df-4e0c-ad71-cfea0633a152"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Why%20can%20regularization%20reduce%20overfitting%20f57a6e7175df4e0cad71cfea0633a152.html">Why can regularization reduce overfitting?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Regularization</span></td></tr><tr id="1bce28bb-31a3-45f0-8d28-0253afcb13bc"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Compare%20two%20classifiers%201bce28bb31a345f08d280253afcb13bc.html">Compare two classifiers</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-orange">System design</span></td></tr><tr id="78ebbcf7-d863-410d-ae02-d981ca98bc6a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/What%20is%20overfitting%2078ebbcf7d863410dae02d981ca98bc6a.html">What is overfitting?</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="de338b17-d700-41f3-9f48-79c7f46797db"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Precision%20and%20recall%20de338b17d70041f39f4879c7f46797db.html">Precision and recall</a></td><td class="cell-Zl-w"><time>@August 28, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="b149cf09-ab21-4280-8620-8f78de7bb6a8"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/SGD%20b149cf09ab21428086208f78de7bb6a8.html">SGD</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="fac056a5-52c7-48cc-990e-8570d8457eca"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Initializing%20weight%20with%200%20for%20NN%20fac056a552c748cc990e8570d8457eca.html">Initializing weight with 0 for NN?</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="ff32c39a-c00a-4f04-8fbc-e5450a7042b9"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Sigmoid%20function%20ff32c39ac00a4f048fbce5450a7042b9.html">Sigmoid function</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Activation Function</span></td></tr><tr id="c58b0b40-24f9-4394-a46d-1544881d691e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Adam%20optimizer%20c58b0b4024f94394a46d1544881d691e.html">Adam optimizer</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Training</span></td></tr><tr id="c61c5ea1-7d3d-409b-b98c-d309fd6eb79a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Learning%20rate%20c61c5ea17d3d409bb98cd309fd6eb79a.html">Learning rate</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="c7d2db4d-8f11-485b-8968-26a9a8de6724"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/tanh%20c7d2db4d8f11485b896826a9a8de6724.html">tanh</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Activation Function</span></td></tr><tr id="583397ca-63c9-4fe9-8f2c-19235ccb8146"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Grid%20search%20and%20random%20search%20583397ca63c94fe98f2c19235ccb8146.html">Grid search and random search</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="6eca5184-6226-4d74-ae8b-e0c0edc5caad"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Why%20is%20non%20linear%20activation%20function%20needed%206eca518462264d74ae8be0c0edc5caad.html">Why is non linear activation function needed?</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Activation Function</span></td></tr><tr id="23b89866-da6a-44bb-9038-abab47359379"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Relation%20between%20logistic%20regression%20and%20neural%20ne%2023b89866da6a44bb9038abab47359379.html">Relation between logistic regression and neural network?</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="e93fd576-5eb8-4f18-8df0-1b71d278a12b"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Exploding%20gradient%20e93fd5765eb84f188df01b71d278a12b.html">Exploding gradient</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="956c5ba7-3650-4f02-82e0-a7f269606369"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Does%20NN%20fit%20data%20better%20than%20logistic%20regression%20956c5ba736504f0282e0a7f269606369.html">Does NN fit data better than logistic regression?</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-orange">System design</span></td></tr><tr id="145c2afd-4d35-45c6-8476-ef3c9e13b807"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Vanishing%20gradient%20145c2afd4d3545c68476ef3c9e13b807.html">Vanishing gradient</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="7ec2790d-43ab-4321-8fae-878b94929ef9"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/RMSprop%207ec2790d43ab43218fae878b94929ef9.html">RMSprop</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="06acaf2d-0cd8-4b8b-a837-f7d6d7ef19e2"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/ReLU%2006acaf2d0cd84b8ba837f7d6d7ef19e2.html">ReLU</a></td><td class="cell-Zl-w"><time>@August 29, 2021</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Activation Function</span></td></tr><tr id="23f8eb8a-8ebc-43c0-b0c9-9fe9e2befc3c"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/linear%20regression%20vs%20logistic%20regression%2023f8eb8a8ebc43c0b0c99fe9e2befc3c.html">linear regression vs logistic regression </a></td><td class="cell-Zl-w"><time>@April 21, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="171651ed-2490-4b30-a067-55253924bac9"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Fourier%20transform%20171651ed24904b30a06755253924bac9.html">Fourier transform</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="76a56738-abc0-425b-9828-cc72d6855b2c"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/1x1%20convolutional%20filter%2076a56738abc0425b9828cc72d6855b2c.html">1x1 convolutional filter</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="94fedd40-abad-453c-9938-04851c37b24d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Bias%20metric%2094fedd40abad453c993804851c37b24d.html">Bias metric</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="cf252376-faa6-4944-986a-637ac7b97715"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Naive%20Bayes%20cf252376faa64944986a637ac7b97715.html">Naive Bayes</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="eab932bd-e679-484e-bace-b5e5b11c5885"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/supervised,%20unsupervised,%20semi-supervised,%20weakly-%20eab932bde679484ebaceb5e5b11c5885.html">supervised, unsupervised, semi-supervised, weakly-supervised, Self-supervised and unsupervised learning reinforcement learning</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="463b962c-33bc-4e6b-bb1c-85028b5b462f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/CNNs%20in%20segmentation%20463b962c33bc4e6bbb1c85028b5b462f.html">CNNs in segmentation </a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="41289407-3777-45aa-8f80-6fa06431aa97"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/data%20visualization%20libraries%2041289407377745aa8f806fa06431aa97.html">data visualization libraries</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-pink">CV</span></td></tr><tr id="aa688c03-d932-45d8-abc2-3cd94ebb89bf"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/model%20accuracy%20or%20model%20performance%20aa688c03d93245d8abc23cd94ebb89bf.html">model accuracy or model performance</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="b56b3feb-5d7d-460b-88ae-e28f88bb929c"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/CV%20Framework%20description%20in%20Chinese%20b56b3feb5d7d460b88aee28f88bb929c.html">CV Framework  description in Chinese</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-pink">CV</span></td></tr><tr id="505954d6-c36f-4561-8ce3-b510d367f8f6"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/What%20is%20attention,%20why%20attention%20505954d6c36f45618ce3b510d367f8f6.html">What is attention, why attention</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="7a44885b-6f25-4141-a524-820a8549810e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/equivariant%20translation%EF%BC%8C%20invariant%20translation%207a44885b6f254141a524820a8549810e.html">equivariant translation， invariant translation</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="bc4e6ffe-8809-4b70-91ab-2db3f688afa9"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Bayes%E2%80%99%20Theorem%20How%20to%20interpret%20Bayes%20rule%20bc4e6ffe88094b7091ab2db3f688afa9.html">Bayes’ Theorem How to interpret Bayes rule</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="34ecd6c1-0d45-4a4a-aa24-b57d04a91d8d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Residual%20Networks%20skip%20connections%2034ecd6c10d454a4aaa24b57d04a91d8d.html">Residual Networks skip connections</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="90aad29d-81eb-46e9-b342-ab035c99bc3a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Parameter%20calculation%2090aad29d81eb46e9b342ab035c99bc3a.html">Parameter calculation</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="3d450d23-b407-4e8a-b12c-fc6f470fb90d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Convolution%20Kernel%20Feature%20map%20dimension%203d450d23b4074e8ab12cfc6f470fb90d.html">Convolution / Kernel / Feature map dimension </a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="c065ad42-e4a5-4cf8-a26b-c2729e99e93a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Small%20convolutional%20kernels%20such%20as%203x3%20rather%20tha%20c065ad42e4a54cf8a26bc2729e99e93a.html">Small convolutional kernels such as 3x3 rather than a few large ones</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="02416916-880d-4747-849b-82d44aece277"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/max-pooling%20CNN%2002416916880d4747849b82d44aece277.html">max-pooling CNN</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="ca6b037f-b1d5-4804-bafc-f85f571e3f86"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Gradient%20Descent%20ca6b037fb1d54804bafcf85f571e3f86.html">Gradient Descent</a></td><td class="cell-Zl-w"><time>@April 23, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="b41727d8-0c0a-4434-aefe-f5e5267dfa30"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Compare%20CNN%20and%20Transformer%20b41727d80c0a4434aefef5e5267dfa30.html">Compare CNN and Transformer</a></td><td class="cell-Zl-w"><time>@April 24, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="a3ee69d1-30a3-43a5-9e0a-546bae4724fe"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Transformer%20a3ee69d130a343a59e0a546bae4724fe.html">Transformer </a></td><td class="cell-Zl-w"><time>@April 24, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="c3d4b5ae-8126-4f1d-91e7-18805bc42720"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Data%20Drift%20Detection%20Importance%20of%20Data%20Drift%20Dete%20c3d4b5ae81264f1d91e718805bc42720.html">Data Drift Detection | Importance of Data Drift Detection</a></td><td class="cell-Zl-w"><time>@April 24, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="f114132d-3a6c-4e3e-b661-50622dc08d7e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/one%20important%20feature%20missing%20from%20a%20trained%20model%20f114132d3a6c4e3eb66150622dc08d7e.html">one important feature missing from a trained model, what can we do?</a></td><td class="cell-Zl-w"><time>@April 24, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="2b2bf1ee-6fc9-4c9f-bfc9-f7dac0ddb71f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/why%20convolution%20layer%20for%20images%20than%20FC%202b2bf1ee6fc94c9fbfc9f7dac0ddb71f.html">why convolution layer for images than FC</a></td><td class="cell-Zl-w"><time>@April 24, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="a04672d5-33ba-4500-9e47-d3e9f9169963"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/calculate%20convolution%20layer%20output%20size%20a04672d533ba45009e47d3e9f9169963.html">calculate convolution layer output size</a></td><td class="cell-Zl-w"><time>@April 24, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="e83aa84a-37e8-48f1-a689-675fbe6f0d5f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/RNN%20e83aa84a37e848f1a689675fbe6f0d5f.html">RNN</a></td><td class="cell-Zl-w"><time>@May 2, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="b5aebf2f-6e65-4a77-893c-c798215b9b3e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Deep%20learning%20b5aebf2f6e654a77893cc798215b9b3e.html">Deep learning</a></td><td class="cell-Zl-w"><time>@May 2, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="d1da5c1b-f2e5-4f26-948a-2aff2391b59e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Autoencoder%20d1da5c1bf2e54f26948a2aff2391b59e.html">Autoencoder</a></td><td class="cell-Zl-w"><time>@May 4, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="294a9819-7017-489a-8f92-02f8f5bda127"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/GAN%20294a98197017489a8f9202f8f5bda127.html">GAN</a></td><td class="cell-Zl-w"><time>@May 4, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="e4b5f2f7-1ba8-4feb-83a1-55b48246a5b8"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/LSTM%20e4b5f2f71ba84feb83a155b48246a5b8.html">LSTM</a></td><td class="cell-Zl-w"><time>@May 4, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="6e1f472c-e071-4acd-ac66-1429f97d0c12"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Turing%20test%206e1f472ce0714acdac661429f97d0c12.html">Turing test</a></td><td class="cell-Zl-w"><time>@May 6, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="2ef5ce8d-a835-4cfd-ad5a-970c72182a43"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Why%20do%20we%20need%20a%20validation%20set%20and%20test%20set%202ef5ce8da8354cfdad5a970c72182a43.html">Why do we need a validation set and test set</a></td><td class="cell-Zl-w"><time>@May 6, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="b94c42b6-18cf-4607-a33d-5317c59edcc8"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/data%20normalization%20b94c42b618cf4607a33d5317c59edcc8.html">data normalization</a></td><td class="cell-Zl-w"><time>@May 6, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="2f332137-c15e-4afe-b0f6-8b4fb32160c1"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/How%20to%20deal%20with%20imbalanced%20dataset%202f332137c15e4afeb0f68b4fb32160c1.html">How to deal with imbalanced dataset</a></td><td class="cell-Zl-w"><time>@May 6, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="2fd0968a-d61f-4a28-ba1d-86a95912e9d1"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/data%20augmentation%202fd0968ad61f4a28ba1d86a95912e9d1.html">data augmentation</a></td><td class="cell-Zl-w"><time>@May 6, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="9306275b-ec11-44ae-a0b6-4906ad2f65a6"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/PCA%20-%20Principal%20Components%20Analysis%209306275bec1144aea0b64906ad2f65a6.html">PCA - Principal Components Analysis</a></td><td class="cell-Zl-w"><time>@May 8, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="3e5410a2-e1c2-4680-b892-64bee47424dc"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Dropouts%203e5410a2e1c24680b89264bee47424dc.html">Dropouts</a></td><td class="cell-Zl-w"><time>@May 8, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="52e78a54-7aff-4d4e-9d10-e4bdc006682a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Reinforcement%2052e78a547aff4d4e9d10e4bdc006682a.html">Reinforcement</a></td><td class="cell-Zl-w"><time>@May 8, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="2254c45b-6e41-4f70-922f-9f84c8bac12c"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Partition%202254c45b6e414f70922f9f84c8bac12c.html">Partition</a></td><td class="cell-Zl-w"><time>@May 8, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="ad03eee6-eb25-4261-aeb1-2515be2abf6f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Attribute%20ad03eee6eb254261aeb12515be2abf6f.html">Attribute</a></td><td class="cell-Zl-w"><time>@May 8, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="62e13ba0-7250-4fd5-85fd-6f2a0ad9090e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Accuracy%2062e13ba072504fd585fd6f2a0ad9090e.html">Accuracy</a></td><td class="cell-Zl-w"><time>@May 8, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="c90ef608-2935-49f7-bec5-6b13ca2e76fc"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Logistic%20Regression%20c90ef608293549f7bec56b13ca2e76fc.html">Logistic Regression</a></td><td class="cell-Zl-w"><time>@May 8, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="05402ce9-ff4b-47c9-9154-de85dd956482"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Batch%20norm,%20mini-batch,%20layer%20norm%2005402ce9ff4b47c99154de85dd956482.html">Batch norm,  mini-batch, layer norm</a></td><td class="cell-Zl-w"><time>@May 8, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="ce784aed-bae4-4a86-946d-feeb45e4e72d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Softmax%20Activation%20Function%20ce784aedbae44a86946dfeeb45e4e72d.html">Softmax Activation Function</a></td><td class="cell-Zl-w"><time>@May 8, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Activation Function</span></td></tr><tr id="a86b5d29-3a31-48b7-957f-c5745bde118f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/ROC%20AUC%20a86b5d293a3148b7957fc5745bde118f.html">ROC AUC</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="1a0da5ce-59d7-45ea-935b-2d86cf9b43a2"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/word2vec%20vs%20doc2vec%201a0da5ce59d745ea935b2d86cf9b43a2.html">word2vec vs. doc2vec</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="df78243b-86e1-4d7c-8d83-1d4700889a71"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/covariance%20matrix%20df78243b86e14d7c8d831d4700889a71.html">covariance matrix</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="e62738cb-4f1a-4ca0-a65c-e80b88408335"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Type%20I%20error%20Type%20II%20error%20loss%20e62738cb4f1a4ca0a65ce80b88408335.html">Type I error / Type II error loss</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="be805160-c34b-4b39-9e55-79229b16c588"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/What%20is%20cost%20function%20loss%20function%20be805160c34b4b399e5579229b16c588.html">What is cost function loss function</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="c17014dc-2dca-4310-a0e6-495f6015591f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Receptive%20Field%20c17014dc2dca4310a0e6495f6015591f.html">Receptive Field</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="65068cfc-4a19-421c-a394-a1dfa2216863"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/confidence%20interval%2065068cfc4a19421ca394a1dfa2216863.html">confidence interval</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="7b23c03b-05f6-4f4f-b116-3da69fe69056"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Why%20do%20I%20have%20to%20convert%20uint8%20into%20float32%207b23c03b05f64f4fb1163da69fe69056.html">Why do I have to convert &quot;uint8&quot; into &quot;float32&quot;</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="770086fb-f888-42e4-9e8e-13d0d550e0f5"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Log%20loss%20770086fbf88842e49e8e13d0d550e0f5.html">Log loss</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="f5cf029d-e4cf-44cb-9993-333f8d289d30"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Loss%20becomes%20Inf%20or%20NaN%20-%20reason%20f5cf029de4cf44cb9993333f8d289d30.html">Loss becomes Inf or NaN - reason</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="3e4ae781-f442-4291-8e75-f61a00884c78"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/F-beta%20Score%203e4ae781f44242918e75f61a00884c78.html">F-beta Score</a></td><td class="cell-Zl-w"><time>@May 9, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="19318e8b-27fd-44dd-89ad-61ed019763a8"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/EM%20algorithm%2019318e8b27fd44dd89ad61ed019763a8.html">EM algorithm</a></td><td class="cell-Zl-w"><time>@May 10, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="aa2d21ec-0a75-4cf1-8f03-5080d4e1443a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/how%20you%20would%20create%20a%203D%20model%20of%20an%20object%20from%20%20aa2d21ec0a754cf18f035080d4e1443a.html">how you would create a 3D model of an object from imagery and depth sensor measurements taken at all angles around the object</a></td><td class="cell-Zl-w"><time>@May 10, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-pink">CV</span></td></tr><tr id="3ec6866f-ce77-4237-ba1d-37ae5a8927da"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/How%20does%20CBIR%20work%203ec6866fce774237ba1d37ae5a8927da.html">How does CBIR work</a></td><td class="cell-Zl-w"><time>@May 10, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-pink">CV</span></td></tr><tr id="474c3f56-bb13-4fcf-bf8c-336bbc424cf0"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Handling%20Outliers%20in%20data%20474c3f56bb134fcfbf8c336bbc424cf0.html">Handling Outliers in data</a></td><td class="cell-Zl-w"><time>@May 10, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="478fcc5c-b8b0-48ed-bc78-9898322f425c"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/CNNs%20translation%20invariant%20478fcc5cb8b048edbc789898322f425c.html">CNNs translation invariant</a></td><td class="cell-Zl-w"><time>@May 10, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-blue">CNN</span></td></tr><tr id="69984057-e101-4b53-b8e0-31a52fd0063f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/RMSE%2069984057e1014b53b8e031a52fd0063f.html">RMSE</a></td><td class="cell-Zl-w"><time>@May 10, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="8bf65b0d-a285-43ca-9c0e-2437a5a4de2d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/How%20do%20you%20prepare%20a%20data%208bf65b0da28543ca9c0e2437a5a4de2d.html">How do you prepare a data?</a></td><td class="cell-Zl-w"><time>@May 11, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-gray">Data prepare</span></td></tr><tr id="7556d865-a105-4057-a79d-8ff903f195b3"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Bias-Variance%20Tradeoff%207556d865a1054057a79d8ff903f195b3.html">Bias-Variance Tradeoff</a></td><td class="cell-Zl-w"><time>@May 11, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Regularization</span></td></tr><tr id="295ca329-01dd-446c-aaed-929bc3679d66"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20Conv2D%20and%20Active%20function%20from%20scratch%20295ca32901dd446caaed929bc3679d66.html">Write Conv2D and Active function from scratch</a></td><td class="cell-Zl-w"><time>@May 12, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="43108454-6b35-467f-960b-86d874651691"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20Max%20Pooling%20from%20scratch%20431084546b35467f960b86d874651691.html">Write Max Pooling from scratch</a></td><td class="cell-Zl-w"><time>@May 12, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="b363d8cc-e86f-4ab2-bb17-79e656620845"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Ran%E2%80%8D%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8D%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8C%E2%80%8D%E2%80%8D%E2%80%8C%E2%80%8D%E2%80%8Cdom%20Forest%20vs%20Gradient%20Boosted%20%20b363d8cce86f4ab2bb1779e656620845.html">Ran‍‌‌‌‌‍‌‌‌‌‌‍‍‌‍‌dom Forest vs. Gradient Boosted Forest (Decision Tree)</a></td><td class="cell-Zl-w"><time>@May 12, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="b76d13c3-679e-4452-8f3b-aa3a3f97887f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Maximum%20Likelihood%20Estimation%20(MLE)%20-%20when%20find%20th%20b76d13c3679e44528f3baa3a3f97887f.html">Maximum Likelihood Estimation (MLE) - when find the mean and standard diviation of a group of models </a></td><td class="cell-Zl-w"><time>@May 12, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="fde2b906-4bb4-4ffe-9aa1-9a9a068580b2"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/K-means%20fde2b9064bb44ffe9aa19a9a068580b2.html">K-means</a></td><td class="cell-Zl-w"><time>@May 12, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="ae6558f3-6e49-451e-b840-e0002647d40d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Compare%20RNN,LSTM%20with%20transformer%20ae6558f36e49451eb840e0002647d40d.html">Compare RNN,LSTM with transformer</a></td><td class="cell-Zl-w"><time>@May 12, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="f4f9c163-4935-43c2-ab48-ff4c2b805135"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/L1%20loss%20vs%20L2%20loss%20f4f9c163493543c2ab48ff4c2b805135.html"> L1 loss vs. L2 loss</a></td><td class="cell-Zl-w"><time>@May 12, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="718a9cfd-b89b-4b7a-865c-8f3381955da6"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Ensemble%20boosting%20bagging%20718a9cfdb89b4b7a865c8f3381955da6.html">Ensemble boosting bagging</a></td><td class="cell-Zl-w"><time>@May 13, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="3b9defb0-e9b7-45b9-baf9-a9a481fc8032"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/difference%20between%20t-SNE%20and%20UMAP%20for%20dimensionali%203b9defb0e9b745b9baf9a9a481fc8032.html">difference between t-SNE and UMAP for dimensionality reduction</a></td><td class="cell-Zl-w"><time>@May 16, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="aa68c886-df37-4ce8-ade0-b6bc7a80a3a2"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/non%20maximal%20suppression%20aa68c886df374ce8ade0b6bc7a80a3a2.html">non maximal suppression</a></td><td class="cell-Zl-w"><time>@May 16, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-pink">CV</span></td></tr><tr id="483d0d0d-776c-4589-a01d-21a99738b8b1"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Label%20Encoding%20vs%20One%20Hot%20Encoding%20483d0d0d776c4589a01d21a99738b8b1.html">Label Encoding vs. One Hot Encoding</a></td><td class="cell-Zl-w"><time>@May 16, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="75c5775c-de8a-487c-85b7-842642a609d6"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Instance-Based%20vs%20Model-Based%20Learning%2075c5775cde8a487c85b7842642a609d6.html">Instance-Based vs Model-Based Learning</a></td><td class="cell-Zl-w"><time>@May 16, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="cb6c289b-9bee-4277-a04f-39f6fe75127f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/t-SNE%20sklearn%20cb6c289b9bee4277a04f39f6fe75127f.html">t-SNE sklearn</a></td><td class="cell-Zl-w"><time>@May 16, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="3fa8759b-4f45-419e-a7c4-c14ca9718e18"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/UMAP%203fa8759b4f45419ea7c4c14ca9718e18.html">UMAP</a></td><td class="cell-Zl-w"><time>@May 16, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="a879388d-38fb-480c-880c-5353cafba272"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/difference%20between%20LDA%20and%20PCA%20for%20dimensionality%20%20a879388d38fb480c880c5353cafba272.html">difference between LDA and PCA for dimensionality reduction</a></td><td class="cell-Zl-w"><time>@May 16, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="d9299f9a-f39b-4d37-ad5b-e9384d3fe23e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/PCA,%20t-SNE,%20and%20UMAP%20d9299f9af39b4d37ad5be9384d3fe23e.html">PCA, t-SNE, and UMAP</a></td><td class="cell-Zl-w"><time>@May 16, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="3f24784a-59f2-4c6a-b1cc-832f6a072f1a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/probability%20vs%20maximum%20likelihood%203f24784a59f24c6ab1cc832f6a072f1a.html">probability vs maximum likelihood</a></td><td class="cell-Zl-w"><time>@May 16, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="3422b0e2-2d51-476f-bc22-8c2d216eccc3"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/KNN%20different%20from%20k-means%20clustering%203422b0e22d51476fbc228c2d216eccc3.html">KNN different from k-means clustering</a></td><td class="cell-Zl-w"><time>@May 18, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="7a417b1d-5d61-4e5b-83a1-cc92c74b6cb2"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Create%20a%20function%20to%20compute%20an%20integral%20image,%20an%207a417b1d5d614e5b83a1cc92c74b6cb2.html">Create a function to compute an integral image, and create another function to get area sums from the integral image</a></td><td class="cell-Zl-w"><time>@May 18, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-pink">CV</span></td></tr><tr id="7ea75143-bebc-4b92-a2d7-ccc4a876b49f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Epoch%20vs%20Batch%20vs%20Iteration%207ea75143bebc4b92a2d7ccc4a876b49f.html"> Epoch vs. Batch vs. Iteration</a></td><td class="cell-Zl-w"><time>@May 18, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Training</span></td></tr><tr id="7a2fae73-2b1c-4c11-9e81-0602a905bdd3"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Batch%20Gradient%20Descent%20and%20Stochastic%20Gradient%20Des%207a2fae732b1c4c119e810602a905bdd3.html"> Batch Gradient Descent and Stochastic Gradient Descent</a></td><td class="cell-Zl-w"><time>@May 18, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="e5df6e5c-fa43-4363-8839-f7bda6a08dc1"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Momentum%20e5df6e5cfa4343638839f7bda6a08dc1.html">Momentum</a></td><td class="cell-Zl-w"><time>@May 18, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="de137815-57c8-4adc-9773-b239931052d8"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Connected%20Component%20Labeling%20de13781557c84adc9773b239931052d8.html">Connected Component Labeling</a></td><td class="cell-Zl-w"><time>@May 18, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-pink">CV</span></td></tr><tr id="6efd76d7-5cfd-4326-81ac-f7eb065dfc48"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Pytorch%20CNN%206efd76d75cfd432681acf7eb065dfc48.html">Pytorch CNN</a></td><td class="cell-Zl-w"><time>@June 7, 2022</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="a39cc09c-f0da-49db-a524-5697dc311b04"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20plot%20image%20using%20Matplotlib%20pyplot%20from%20scra%20a39cc09cf0da49dba5245697dc311b04.html">Write plot image using Matplotlib pyplot from scratch</a></td><td class="cell-Zl-w"><time>@January 4, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="c7234fae-30cd-4e70-8afa-17f7dc681edd"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20K-means%20from%20scratch%20c7234fae30cd4e708afa17f7dc681edd.html">Write K-means from scratch</a></td><td class="cell-Zl-w"><time>@January 18, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="83150ff5-ffcb-458f-aa7f-1143b1daf828"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20Gradient%20Descent%20Active%20Function%20from%20scratc%2083150ff5ffcb458faa7f1143b1daf828.html">Write Gradient Descent / Active Function from scratch</a></td><td class="cell-Zl-w"><time>@January 24, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="a3b711c4-fb30-459d-afc0-13670233ac5f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/PyTorch%20Cheatsheet%20a3b711c4fb30459dafc013670233ac5f.html">PyTorch Cheatsheet</a></td><td class="cell-Zl-w"><time>@February 6, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="4da321dc-2c80-4e6c-9926-16ed721ec8b3"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20KNN%20from%20scratch%204da321dc2c804e6c992616ed721ec8b3.html">Write KNN from scratch</a></td><td class="cell-Zl-w"><time>@February 14, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="1e566e50-bfad-4a29-85e0-11b55659eb79"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Python%20Library%201e566e50bfad4a2985e011b55659eb79.html">Python Library</a></td><td class="cell-Zl-w"><time>@February 14, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="97d927fd-1bb7-4982-ab3c-0d0a6be40dfd"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Feature%20Crosses%2097d927fd1bb74982ab3c0d0a6be40dfd.html">Feature Crosses</a></td><td class="cell-Zl-w"><time>@February 17, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="9d1f1391-bbcd-4ad3-8456-1f3a999ebc82"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/SOTA%209d1f1391bbcd4ad384561f3a999ebc82.html">SOTA</a></td><td class="cell-Zl-w"><time>@February 17, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">SOTA</span></td></tr><tr id="73f04b1d-ac63-443a-b397-99e4ecf95ee4"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Feature%20Hashing%2073f04b1dac63443ab39799e4ecf95ee4.html">Feature Hashing</a></td><td class="cell-Zl-w"><time>@February 17, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="ef718c98-3470-419e-8dfa-19d83ca9f648"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/One-hot%20encoding%20ef718c983470419e8dfa19d83ca9f648.html">One-hot encoding</a></td><td class="cell-Zl-w"><time>@February 17, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="df66c69e-c024-4a99-98a4-59f75133c60f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Embedding%20df66c69ec0244a9998a459f75133c60f.html">Embedding</a></td><td class="cell-Zl-w"><time>@February 17, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="db0c5a07-9081-46b8-bd59-1c9ad475cac2"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Numeric%20Features%20db0c5a07908146b8bd591c9ad475cac2.html">Numeric Features</a></td><td class="cell-Zl-w"><time>@February 17, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="3439d5e8-ab9d-48c0-a852-53cb27327d00"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/How%20do%20we%20measure%20similarity%203439d5e8ab9d48c0a85253cb27327d00.html">How do we measure similarity?</a></td><td class="cell-Zl-w"><time>@February 17, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="ba1acb82-1614-4866-8d21-e55d7fe08ef7"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Mean%20encoding%20ba1acb82161448668d21e55d7fe08ef7.html">Mean encoding</a></td><td class="cell-Zl-w"><time>@February 17, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="6eab00f3-0f87-412a-9a4a-d89c6cfb2187"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/GELU%206eab00f30f87412a9a4ad89c6cfb2187.html">GELU</a></td><td class="cell-Zl-w"><time>@February 18, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Activation Function</span></td></tr><tr id="934efe76-c9aa-408b-aa44-d1689e364e85"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Loss%20Functions%20934efe76c9aa408baa44d1689e364e85.html">Loss Functions</a></td><td class="cell-Zl-w"><time>@February 18, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="1bf95114-8af6-4473-93d2-7efe8d08981e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Huber%20loss%201bf951148af6447393d27efe8d08981e.html">Huber loss</a></td><td class="cell-Zl-w"><time>@February 19, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="8e4cfb42-33fc-49ef-b75c-40fb5ac2c036"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Data%20Generation%20Strategy%208e4cfb4233fc49efb75c40fb5ac2c036.html">Data Generation Strategy</a></td><td class="cell-Zl-w"><time>@February 19, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Training</span></td></tr><tr id="e65f6c09-1810-4314-904b-04b1ea4b1e26"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Handle%20Imbalance%20Class%20Distribution%20e65f6c0918104314904b04b1ea4b1e26.html">Handle Imbalance Class Distribution</a></td><td class="cell-Zl-w"><time>@February 19, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Training</span></td></tr><tr id="4be63820-ea52-4b26-8de8-2c568bac775c"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Data%20Partitioning%204be63820ea524b268de82c568bac775c.html">Data Partitioning</a></td><td class="cell-Zl-w"><time>@February 19, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Training</span></td></tr><tr id="e286299b-df59-4aad-9f24-68beb8ec0fd2"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Mean%20square%20error%20and%20mean%20absolute%20error%20e286299bdf594aad9f2468beb8ec0fd2.html">Mean square error and mean absolute error</a></td><td class="cell-Zl-w"><time>@February 19, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="0a605188-ed8c-41c7-817b-65ec9e8b8680"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Common%20Resampling%20Use%20Cases%200a605188ed8c41c7817b65ec9e8b8680.html">Common Resampling Use Cases</a></td><td class="cell-Zl-w"><time>@February 19, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Training</span></td></tr><tr id="a9f04d07-b8dd-4c9c-bd2c-57c7e890c11d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/A%20B%20Testing%20in%20Ads%20a9f04d07b8dd4c9cbd2c57c7e890c11d.html">A/B Testing in Ads</a></td><td class="cell-Zl-w"><time>@February 19, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-orange">System design</span></td></tr><tr id="b15cc9ba-2d58-46f5-81b2-ee7d89349f31"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/How%20LinkedIn%20Generates%20Data%20for%20Course%20Recommendat%20b15cc9ba2d5846f581b2ee7d89349f31.html">How LinkedIn Generates Data for Course Recommendation</a></td><td class="cell-Zl-w"><time>@February 19, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-orange">System design</span></td></tr><tr id="578c206c-9ae5-4359-9c1d-d886477d2acd"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Conditional%20Random%20Fields%20(CRFs)%20578c206c9ae543599c1dd886477d2acd.html">Conditional Random Fields (CRFs)</a></td><td class="cell-Zl-w"><time>@February 20, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="a8b8158b-3b2f-4ebb-9b7d-918135060364"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Random%20Number%20Generator%20a8b8158b3b2f4ebb9b7d918135060364.html">Random Number Generator</a></td><td class="cell-Zl-w"><time>@February 20, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="ec5cd3ae-7a8d-4e08-b486-fed4245803e9"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Split%20Train%20test%20valid%20ec5cd3ae7a8d4e08b486fed4245803e9.html">Split Train test valid</a></td><td class="cell-Zl-w"><time>@February 20, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="007c1ff4-6b01-4bd4-b74b-2e050167e053"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Quantile%20Loss%20007c1ff46b014bd4b74b2e050167e053.html">Quantile Loss</a></td><td class="cell-Zl-w"><time>@February 20, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="8d2cb23f-0863-47be-b56c-c247f2bf583e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Active%20function%208d2cb23f086347beb56cc247f2bf583e.html">Active function</a></td><td class="cell-Zl-w"><time>@February 21, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="632db2b1-4324-4beb-bad2-0b038b2497e9"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/parallel%20implementation%20632db2b143244bebbad20b038b2497e9.html"> parallel implementation</a></td><td class="cell-Zl-w"><time>@February 21, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="4eba6001-1a57-4012-81a5-421ae9523d96"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Pytorch%20Skip%20connection%204eba60011a57401281a5421ae9523d96.html">Pytorch Skip connection</a></td><td class="cell-Zl-w"><time>@February 22, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="052fe5c9-5d16-42bd-8279-65acaf21c92a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Forcast%20Metrics%20052fe5c95d1642bd827965acaf21c92a.html">Forcast Metrics</a></td><td class="cell-Zl-w"><time>@February 22, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="2c560c58-e76e-415a-a9ec-5996c73d6292"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Normalized%20Cross%20Entropy%202c560c58e76e415aa9ec5996c73d6292.html">Normalized Cross Entropy</a></td><td class="cell-Zl-w"><time>@February 22, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="d4ae6b74-ff58-45ce-8059-2a3ee16d1089"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Focal%20loss%20d4ae6b74ff5845ce80592a3ee16d1089.html">Focal loss</a></td><td class="cell-Zl-w"><time>@February 22, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-default">Loss</span></td></tr><tr id="328c2e92-e764-4228-b0eb-f9a2a25a06d7"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20a%20Perceptron%20Classifier%20for%20Binary%20Classific%20328c2e92e7644228b0ebf9a2a25a06d7.html">Write a Perceptron Classifier for Binary Classification</a></td><td class="cell-Zl-w"><time>@February 22, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="bebaab8c-4fea-499d-9395-ee9c8316970a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20a%20Simple%20Image%20Classifier%20(Using%20package)%20bebaab8c4fea499d9395ee9c8316970a.html">Write a Simple Image Classifier (Using package)</a></td><td class="cell-Zl-w"><time>@February 22, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="93089681-926e-4849-a804-41693fe10832"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20a%20Naive%20Bayes%20Classifier%20from%20scratch%2093089681926e4849a80441693fe10832.html">Write a Naive Bayes Classifier from scratch</a></td><td class="cell-Zl-w"><time>@February 22, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="92056a54-7886-45d4-9e42-98e07768c1f9"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/IOU%2092056a54788645d49e4298e07768c1f9.html">IOU</a></td><td class="cell-Zl-w"><time>@February 26, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-green">Metrics</span></td></tr><tr id="5185f4aa-b60d-42bb-94f1-e3fd6c8b1286"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/KNN%205185f4aab60d42bb94f1e3fd6c8b1286.html">KNN</a></td><td class="cell-Zl-w"><time>@February 27, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="4fc3c747-48e4-4532-b0ff-ea4d8a8eb756"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Activation%20functions%204fc3c74748e44532b0ffea4d8a8eb756.html">Activation functions</a></td><td class="cell-Zl-w"><time>@February 28, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-yellow">Activation Function</span></td></tr><tr id="6d304341-88ef-4259-8ed3-65c7aef22c7f"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/DALL%C2%B7E%206d30434188ef42598ed365c7aef22c7f.html">DALL·E</a></td><td class="cell-Zl-w"><time>@February 28, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="bd2817c4-3c64-4994-b528-bd5e5cdb544d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Vision%20Transformer%20bd2817c43c644994b528bd5e5cdb544d.html">Vision Transformer</a></td><td class="cell-Zl-w"><time>@February 28, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="0f3ea6c7-6c97-4f2f-96d8-d52b7f30f3cf"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/MultiModal%20(Text-Image)%200f3ea6c76c974f2f96d8d52b7f30f3cf.html">MultiModal (Text-Image)</a></td><td class="cell-Zl-w"><time>@February 28, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="b9e159f1-8c86-4e6b-9650-709621a4754d"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/BERT%20b9e159f18c864e6b9650709621a4754d.html">BERT</a></td><td class="cell-Zl-w"><time>@February 28, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-red">NN</span></td></tr><tr id="6235104a-84a0-434b-a67a-a52e57781cb5"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/What%20do%20you%20understand%20by%20transfer%20learning%20Name%20a%206235104a84a0434ba67aa52e57781cb5.html">What do you understand by transfer learning? Name a few commonly used transfer learning models.</a></td><td class="cell-Zl-w"><time>@February 28, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-purple">Basic Concepts</span></td></tr><tr id="6d9f9895-c9b2-4165-84c5-b6ccad2cdf04"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/01%20ML%20system%20design%20introduction%20-%20bytebytego%206d9f9895c9b2416584c5b6ccad2cdf04.html">01 ML system design introduction - bytebytego</a></td><td class="cell-Zl-w"><time>@February 29, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-orange">System design</span></td></tr><tr id="2d005759-76cd-4f07-98c4-1eac377424f2"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Write%20FC%20Layer%20Neural%20Network%20from%20scratch%202d00575976cd4f0798c41eac377424f2.html">Write FC Layer Neural Network from scratch</a></td><td class="cell-Zl-w"><time>@February 29, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="a329691b-9fcf-412c-8495-dee8b721b9df"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Retrieval%20Augmented%20Generation%20a329691b9fcf412c8495dee8b721b9df.html">Retrieval Augmented Generation</a></td><td class="cell-Zl-w"><time>@March 1, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">GENAI</span></td></tr><tr id="6e50e4ca-c21f-475b-9147-a759296c0f25"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/AlBEF%20-%20BLIP%20-%20BLIP2%206e50e4cac21f475b9147a759296c0f25.html">AlBEF - BLIP - BLIP2</a></td><td class="cell-Zl-w"><time>@March 1, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">GENAI</span></td></tr><tr id="aa170115-08ae-4929-aa0b-615c1ab04404"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/MultiModal%20aa17011508ae4929aa0b615c1ab04404.html">MultiModal</a></td><td class="cell-Zl-w"><time>@March 1, 2024</time></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">GENAI</span></td></tr><tr id="82e10145-0c20-4ec3-94e7-854f0e4c502a"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/PCA%2082e101450c204ec394e7854f0e4c502a.html">PCA</a></td><td class="cell-Zl-w"></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="380f65f8-533f-4935-8f91-85bed656fd8e"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/SVM%20(Support%20Vector%20Machine)%20380f65f8533f49358f9185bed656fd8e.html">SVM (Support Vector Machine)</a></td><td class="cell-Zl-w"></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr><tr id="6145a554-11f6-4a55-af27-1200080bf677"><td class="cell-title"><a href="ML%20CV%2052c1cf5cb07b40878e8b3742a98e1f31/Logistic%20Regression%206145a55411f64a55af271200080bf677.html">Logistic Regression</a></td><td class="cell-Zl-w"></td><td class="cell-,Tu%"><span class="selected-value select-value-color-brown">ML Coding</span></td></tr></tbody></table><br/><br/></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
